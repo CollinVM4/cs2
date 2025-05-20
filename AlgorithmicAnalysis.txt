@@ -30,3 +30,24 @@ Asymptotic Upper Bound, F(n) <= K * G(n) (actions will always be lesser or equal
 Asymptotic Lower Bound, AKA BEST CASE. BIG OMEGA
 Big THETA, the intersection of the two Omega, Theta
 
+Main Asympottic Classes 
+Logarithmic - O(logn) * A GOOD SEARCH IS Logarithmic
+Linear - O(n) and its friends, * GROW PROPORTIONATELY TO INPUT
+LogLinear - O(nlogn) * All good Sorts are LogLinear
+Quadratic - for every visit u visit again for every other object
+Polynomial - O(n^A) for some constant a - the general case of quadratic, cubic
+Exponential - O(2^N) - cannot compute these algorithms in any effective way
+
+
+Trees
+U have a root node at top
+Every node aside from the root, has 1 parent, any # of children, siblings
+
+RED BLACK TREES 
+- goated
+
+TWO-FOUR TREES or TWO,3,4 Tree
+- goated, each node
+- project 1 
+
+
