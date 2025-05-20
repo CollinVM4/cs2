@@ -135,3 +135,5 @@ public class BasicLinkedList
 }
 
 // why cannot have o(1) delete w/ current BetterLinkedList setup
+
+// linked lists "shell" is private, it would have to pass its structure (not a good idea) to make an o(1) delete
