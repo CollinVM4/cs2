@@ -1,0 +1,53 @@
+Second Day
+5/20/25
+
+Math Review
+summations- for loops...
+** polynomials in this class will always be expanded
+** tests will be open note, open 6pm thur - friday 11:59pm
+** MUST TYPE it up, submit as pdf...
+** labs begin next week, 5/28/25
+** there will be 3 TESTS
+** diagrams.net for grahics for tests, homework.
+
+Logarithms are sort of inverse functions of Exponents
+b^y = x, logb(x)= y
+Rules to logarithms, product, quotient, power, base change, base switch 
+Rules to Exponents, product, quotient, power
+
+
+Time Analysis 
+T(n) to denote the running time of an algorithm, 
+aka the amt of computer operations (comparisons, data moves)
+* What s each statement in the algorithm?
+* How many operations does each statement take?
+* How comparable are the operations.
+we are really doing an "asymptotic order analysis"... 
+How does this program act as data GROWS?
+
+
+Asymptotic Upper Bound, F(n) <= K * G(n) (actions will always be lesser or equal to G(n)) BIG O
+Asymptotic Lower Bound, AKA BEST CASE. BIG OMEGA
+Big THETA, the intersection of the two Omega, Theta
+
+Main Asympottic Classes 
+Logarithmic - O(logn) * A GOOD SEARCH IS Logarithmic
+Linear - O(n) and its friends, * GROW PROPORTIONATELY TO INPUT
+LogLinear - O(nlogn) * All good Sorts are LogLinear
+Quadratic - for every visit u visit again for every other object
+Polynomial - O(n^A) for some constant a - the general case of quadratic, cubic
+Exponential - O(2^N) - cannot compute these algorithms in any effective way
+
+
+Trees
+U have a root node at top
+Every node aside from the root, has 1 parent, any # of children, siblings
+
+RED BLACK TREES 
+- goated
+
+TWO-FOUR TREES or TWO,3,4 Tree
+- goated, each node
+- project 1 
+
+
