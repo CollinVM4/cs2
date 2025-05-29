@@ -1,5 +1,9 @@
+import java.util.Arrays;
+
 public class TwoFourTree {
-    private class TwoFourTreeItem {
+
+    private class TwoFourTreeItem 
+    {
         int values = 1;
         int value1 = 0;                             // always exists.
         int value2 = 0;                             // exists iff the node is a 3-node or 4-node.
@@ -13,39 +17,98 @@ public class TwoFourTree {
         TwoFourTreeItem centerLeftChild = null;     // center-left and center-right children exist iff the node is a non-leaf 4-node.
         TwoFourTreeItem centerRightChild = null;
 
-        public boolean isTwoNode() {
-            return false;
+
+        // finished by me
+        public boolean isTwoNode() 
+        {
+            if (values == 1)
+            {
+                return true;
+            } 
+            else 
+            {
+                return false;
+            }
         }
 
-        public boolean isThreeNode() {
-            return false;
+        // finished by me
+        public boolean isThreeNode() 
+        {
+            if (values == 2)
+            {
+                return true;
+            } 
+            else 
+            {
+                return false;
+            }
         }
 
-        public boolean isFourNode() {
-            return false;
+        // finished by me
+        public boolean isFourNode() 
+        {
+            if (values == 3)
+            {
+                return true;
+            } 
+            else 
+            {
+                return false;
+            }
         }
 
-        public boolean isRoot() {
-            return false;
+        // finished by me
+        public boolean isRoot() 
+        {
+            if(parent == null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
-        public TwoFourTreeItem(int value1) {
-
+        public TwoFourTreeItem(int value1) 
+        {
+            this.value1 = value1;
+            this.values = 1;
         }
 
-        public TwoFourTreeItem(int value1, int value2) {
-            
+        public TwoFourTreeItem(int value1, int value2) 
+        {   
+            if (value1 < value2)
+            {
+                this.value1 = value1;
+                this.value2 = value2;
+            } else
+            {
+                this.value2 = value1;
+                this.value1 = value2;
+            }
+            this.values = 2;
         }
 
-        public TwoFourTreeItem(int value1, int value2, int value3) {
-            
+        public TwoFourTreeItem(int value1, int value2, int value3) 
+        {
+            int[] vals = {value1,value2,value3};
+            Arrays.sort(vals);
+            this.value1 = vals[0];
+            this.value2 = vals[1];
+            this.value3 = vals[2];
+            this.values = 3;
         }
 
-        private void printIndents(int indent) {
+        // completed by Gerber
+        private void printIndents(int indent) 
+        {
             for(int i = 0; i < indent; i++) System.out.printf("  ");
         }
 
-        public void printInOrder(int indent) {
+        // completed by Gerber
+        public void printInOrder(int indent) 
+        {
             if(!isLeaf) leftChild.printInOrder(indent + 1);
             printIndents(indent);
             System.out.printf("%d\n", value1);
@@ -68,6 +131,18 @@ public class TwoFourTree {
     TwoFourTreeItem root = null;
 
     public boolean addValue(int value) {
+
+        //empty tree, add root
+        if(root == null)
+        {
+            root = new TwoFourTreeItem(value);
+            return true;
+        }
+
+        TwoFourTreeItem current = root;
+
+
+
         return false;
     }
 
@@ -79,11 +154,13 @@ public class TwoFourTree {
         return false;
     }
 
+    // commpleted by Gerber
     public void printInOrder() {
         if(root != null) root.printInOrder(0);
     }
 
-    public TwoFourTree() {
+    public TwoFourTree() 
+    {
 
     }
 }
