@@ -1,0 +1,18 @@
+How java handles data structures 
+
+Extension of the iterable interface
+
+Key Interfaces: List, Set, Map, Queue
+
+
+ArrayList : resizable array, grows as u add, shrinks as u delete
+            can hold various datatypes at once
+declare like... ArrayList<String> myList = new ArrayList<>();
+
+myList.add("Apple"); // can also do like myList.add(2, "apple") // adds as second element
+
+
+LinkedList : slow for random access, however good for frequent deletions and inserts
+
+HashMap : keys stored in a hash table. It is possible that different key might have 
+           the same has value. 

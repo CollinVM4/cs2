@@ -1,0 +1,14 @@
+add Value
+    current->root
+    while
+        check children to left ! fournode
+            break
+        if fourNode Splod
+        find connect child
+    
+    add value to current node
+
+
+    xin.liang@ucf.edu <- TA email
+
+    
