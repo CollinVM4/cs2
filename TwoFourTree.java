@@ -147,8 +147,40 @@ public class TwoFourTree {
     }
 
     public boolean hasValue(int value) {
+
+        TwoFourTreeItem cursor = root;
+        
+        while (cursor != null) 
+        {
+            // Check each value in this node
+            if (value == cursor.value1) return true;
+            if (cursor.values >= 2 && value == cursor.value2) return true;
+            if (cursor.values == 3 && value == cursor.value3) return true;
+
+            // Decide which child to follow
+            if (value < cursor.value1) 
+            {
+                cursor = cursor.leftChild;
+            } 
+            else if (cursor.values == 1 || (cursor.values >= 2 && value < cursor.value2)) 
+            {
+                // Covers 2-node and 3-/4-node center/center-left range
+                cursor = (cursor.values == 3) ? cursor.centerLeftChild : cursor.centerChild;
+            } 
+            else if (cursor.values == 2 || (cursor.values == 3 && value < cursor.value3)) 
+            {
+                // Center-right for 4-node
+                cursor = (cursor.values == 3) ? cursor.centerRightChild : cursor.rightChild;
+            } 
+            else 
+            {
+                cursor = cursor.rightChild;
+            }
+        }
+
         return false;
     }
+
 
     public boolean deleteValue(int value) {
         return false;
@@ -159,8 +191,9 @@ public class TwoFourTree {
         if(root != null) root.printInOrder(0);
     }
 
+    // completed by me
     public TwoFourTree() 
     {
-
+        root = null; // initialize empty tree
     }
 }
